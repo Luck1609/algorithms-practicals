@@ -1,15 +1,17 @@
-
-
 // ###################################################
 // ######## FIBONACCI NUMBERS WITH RECURSION #########
 // ###################################################
 
+  let count = 2;
+  
+  console.log("New Fibonacci Number", 0);
+  console.log("New Fibonacci Number", 1);
+
   function fibonacci(prev1, prev2) {
-    let count;
 
     if (count <= 19) {
       // Create new Fibonacci numbers by adding the two previous ones
-      newFn = prev1 + prev2;
+      let newFN = prev1 + prev2;
 
       // Print the new Fibonacci number
       console.log("New Fibonacci Number", newFN);
@@ -21,8 +23,10 @@
       count += 1;
 
       // recall the function itself with the updated values
-      this(prev1, prev2)
+      fibonacci(prev1, prev2);
     } else return
   }
+
+  fibonacci(1, 0)
 
   
